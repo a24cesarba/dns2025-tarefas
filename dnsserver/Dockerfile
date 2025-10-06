@@ -5,6 +5,7 @@ RUN apt update  && apt install -y \
     iproute2 \
     iputils-ping \
     bind9 \
+    vim \
     bind9utils \
     dnsutils \
     && rm -rf /var/lib/apt/lists/*
