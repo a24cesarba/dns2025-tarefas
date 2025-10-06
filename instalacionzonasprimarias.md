@@ -1,4 +1,5 @@
 # Hola que tal
+
 options {
         directory "/var/cache/bind";
         forwarders {
