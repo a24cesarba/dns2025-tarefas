@@ -1,6 +1,6 @@
 $TTL 86400
 @   IN  SOA darthvader.starwars.lan. admin.starwars.lan. (
-            2025100601 ; Serial
+            2025100602 ; Serial
             3600
             1800
             604800
