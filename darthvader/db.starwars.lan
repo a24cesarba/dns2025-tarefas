@@ -1,6 +1,6 @@
 $TTL 86400
 @   IN  SOA darthvader.starwars.lan. admin.starwars.lan. (
-            2025100602 ; Serial
+            2025100603 ; Serial
             3600
             1800
             604800
@@ -17,7 +17,7 @@ skywalker       IN  A   192.168.20.111
 luke            IN  A   192.168.20.22
 yoda            IN  A   192.168.20.24
 yoda            IN  A   192.168.20.25
-c3p0            IN  A   192.168.20.26
+c3p0            IN  A   192.168.20.27
 
 palpatine       IN  CNAME darthsidious.starwars.lan.
 
