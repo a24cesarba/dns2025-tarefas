@@ -1,9 +1,8 @@
-# Hola que tal
+# Zonas primarias Windows Server
+---
+## Búsqueda directa
+![Búsqueda directa](./2025-10-16_12-07.png)
 
-options {
-        directory "/var/cache/bind";
-        forwarders {
-                8.8.8.8;
-                9.9.9.9;
-        };
-};
+## Búsqueda inversa
+
+![Búsqueda inversa](./2025-10-16_12-08.png)
