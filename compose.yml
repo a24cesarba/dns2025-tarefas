@@ -15,6 +15,8 @@ services:
   darthsidious:
     build: dnsserver
     hostname: darthsidious
+    depends_on:
+      - darthvader
     #Quitámolos non sei por que vese que non fai falta
     # ports:
     #   - 10.26.0.6:53:53    #So na rede principal
@@ -24,6 +26,19 @@ services:
     networks:
       rededns:
         ipv4_address: 192.168.20.11
+
+  leia:
+    build: dnsserver
+    hostname: leia
+    depends_on:
+      - darthvader
+    volumes:
+      - ./leia/named.conf.options:/etc/bind/named.conf.options
+      - ./leia/named.conf.local:/etc/bind/named.conf.local
+      - ./leia/named.conf.local:/var/cache/bind/db.imperio.starwars.lan
+    networks:
+      rededns:
+        ipv4_address: 192.168.20.106
   cliente:
     build: cliente
     hostname: cliente1
@@ -38,5 +53,4 @@ networks:
     ipam:
       config:
         - subnet: 192.168.20.0/24
-
 

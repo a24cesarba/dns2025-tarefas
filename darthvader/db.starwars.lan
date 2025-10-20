@@ -24,3 +24,10 @@ palpatine       IN  CNAME darthsidious.starwars.lan.
 @               IN  MX 10 c3p0.starwars.lan.
 
 @               IN  TXT "Que a forza te acompanhe"
+
+$ORIGIN antigarepublica.academia.jedi.
+xendor  IN  A   192.168.20.215
+ardenlyn  IN  A   192.168.20.216
+
+$ORIGIN imperio.academia.jedi.
+@   IN  NS  leia.starwars.lan.

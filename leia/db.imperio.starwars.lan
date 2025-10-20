@@ -1,0 +1,14 @@
+$TTL 86400
+@   IN  SOA leia.imperio.starwars.lan. admin.imperio.starwars.lan. (
+            2025100603 ; Serial
+            3600
+            1800
+            604800
+            86400
+)
+
+@   IN  NS  leia.imperio.starwars.lan.
+
+leia    IN  A   182.168.20.106
+tsuichoi  IN  A   192.168.20.225
+bultarswan  IN  A   192.168.20.226
