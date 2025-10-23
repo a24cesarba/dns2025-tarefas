@@ -6,3 +6,21 @@ options {
                 9.9.9.9;
         };
 };
+
+logging {
+        channel query.log {
+                file "/var/log/bind/query.log"
+        };
+        category queries { query.log; };
+        channel update.log {
+                file "/var/log/bind/update.log"
+        };
+        category updates { update.log; };
+};
+
+include "/etc/bind/rndc.key" ;
+controls {
+        inet 127.0.0.1 port 953;
+        inet 192.168.20.10 port 953;
+        allow         
+}

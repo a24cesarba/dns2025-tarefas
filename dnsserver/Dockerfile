@@ -7,6 +7,7 @@ RUN apt update  && apt install -y \
     bind9 \
     vim \
     bind9utils \
+    rsyslog \
     dnsutils \
     && rm -rf /var/lib/apt/lists/*
 
@@ -17,6 +18,8 @@ RUN chmod a+x /dns/entrypoint.sh
 EXPOSE 53
 # USER bind
 WORKDIR /var/cache/bind
+
+RUN sed -i 's/^\s*module(load="imklog")/#module(load="imklog")' /etc/rsyslog.conf
 
 CMD ["-4"]
 

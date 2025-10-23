@@ -1,4 +1,5 @@
 #!/bin/bash
 #chmod a+x safsdadfs
-named -g -u bind "$@"
+rsyslogd
 
+named -f -u bind "$@"

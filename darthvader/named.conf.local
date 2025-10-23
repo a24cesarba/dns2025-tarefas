@@ -21,3 +21,4 @@ zone "20.168.192.in-addr.arpa" {
     //allow-transfer {192.168.20.11; };
     allow-transfer {key "darthvader"; };
 };
+

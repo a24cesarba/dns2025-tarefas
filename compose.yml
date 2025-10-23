@@ -9,6 +9,9 @@ services:
       - ./darthvader/named.conf.local:/etc/bind/named.conf.local
       - ./darthvader/db.192.168.20:/var/cache/bind/db.192.168.20
       - ./darthvader/db.starwars.lan:/var/cache/bind/db.starwars.lan
+      - ./logs:/var/log/bind
+      - ./logs/query.log:/var/log/bind/query.log
+      - ./logs/update.log:/var/log/bind/update.log
     networks:
       rededns:
         ipv4_address: 192.168.20.10
@@ -45,6 +48,8 @@ services:
     networks:
       rededns:
         ipv4_address: 192.168.20.100
+    volumes:
+      - ./cliente/rndc.conf:/etc/bind/rndc
     dns:
     - 192.168.20.10
     - 192.168.20.11
