@@ -29,5 +29,5 @@ $ORIGIN antigarepublica.academia.jedi.
 xendor  IN  A   192.168.20.215
 ardenlyn  IN  A   192.168.20.216
 
-$ORIGIN imperio.academia.jedi.
+$ORIGIN imperio.starwars.lan.
 @   IN  NS  leia.starwars.lan.

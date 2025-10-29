@@ -18,9 +18,16 @@ logging {
         category updates { update.log; };
 };
 
+//importante esto
 include "/etc/bind/rndc.key" ;
+//
 controls {
-        inet 127.0.0.1 port 953;
-        inet 192.168.20.10 port 953;
-        allow         
+        inet 127.0.0.1 port 953 { 127.0.0.1; } keys { "rndc-key"; };
+        inet 192.168.20.10 port 953 { 192.168.20.10; } keys { "rndc-key"; };
+        allow 
 }
+
+key "rndc-key" {
+        algorithm hmac-sha256;
+        secret "6uxbw8dIr9uSCtt+hRqeYHtkztj0WIjPYEmUMrDRJiY=";
+};
