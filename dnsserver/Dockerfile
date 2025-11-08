@@ -19,7 +19,7 @@ EXPOSE 53
 # USER bind
 WORKDIR /var/cache/bind
 
-RUN sed -i 's/^\s*module(load="imklog")/#module(load="imklog")' /etc/rsyslog.conf
+RUN sed -i "s/^\\s*module(load=\"imklog\")/#module(load=\"imklog\")/" /etc/rsyslog.conf
 
 CMD ["-4"]
 

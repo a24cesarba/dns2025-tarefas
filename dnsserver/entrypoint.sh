@@ -2,4 +2,4 @@
 #chmod a+x safsdadfs
 rsyslogd
 
-named -f -u bind "$@"
+named -g -u bind "$@"
